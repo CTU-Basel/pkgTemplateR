@@ -8,6 +8,5 @@
 #'                     package = "pkgTemplateR")
 #' print_file_content(file_path = path)
 print_file_content <- function(file_path) {
-  x <- 1
   cat(read_file(file_path))
 }
