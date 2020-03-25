@@ -118,7 +118,8 @@ indicated above. Please also increment the version number and recompile the
 `README.md` to increment the dev-version badge (requires installing the
 package after editing the `DESCRIPTION` file). If all tests pass and linting
 confirms that your coding style conforms you can send a pull request (PR).
-Changes should also be mentioned in the `NEWS` file.
+Changes should also be mentioned in the `NEWS` file. A test has been implemented
+to remind you to make these changes (see [here](tests/testthat/test-version_diff.R)).
 The PR should have a description to help the reviewer understand what has been 
 added/changed. New functionalities must be thoroughly documented, have examples 
 and should be accompanied by at least one [test](tests/testthat/) to ensure long term 
