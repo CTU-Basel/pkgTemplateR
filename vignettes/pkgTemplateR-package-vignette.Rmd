@@ -1,0 +1,70 @@
+---
+title: "pkgTemplateR - a vignette"
+author: "John Smith"
+date: "`r Sys.Date()`"
+output: rmarkdown::pdf_document
+toc: true
+vignette: >
+  %\VignetteIndexEntry{pkgTemplateR-package-vignette}
+  %\VignetteEngine{knitr::rmarkdown}
+  %\VignetteEncoding{UTF-8}
+---
+
+\newpage
+
+# Introduction
+
+This R package does something useful... for sure...
+
+```{r, include = FALSE}
+# needed so that the as.data.frame part of the vignette
+# does not need a restart of the session everytime the
+# vignette is built
+rm(list = ls())
+knitr::opts_chunk$set(
+  collapse = TRUE,
+  comment = "#>"
+)
+```
+
+# Installing from GitHub with `devtools`
+
+Let's get started by installing the package straight from
+[\textcolor{blue}{GitHub}](https://github.com/SwissClinicalTrialOrganisation/secuTrialR)
+and then loading it. For this you will need to have `devtools` installed. We are
+planning to add `secuTrialR` to CRAN but we are not there yet. If you are working on Windows and would
+like to install with `devtools` you  will likely need to install
+[\textcolor{blue}{Rtools}](https://cran.r-project.org/bin/windows/Rtools/).
+
+\vspace{5pt}
+
+```{r, eval = FALSE}
+# install
+devtools::install_github("CTU-Basel/pkgTemplateR")
+```
+
+
+# Loading the package
+
+```{r}
+# load
+library(pkgTemplateR)
+# show pkgTemplateR version
+installed.packages()["pkgTemplateR", "Version"]
+```
+
+# Printing the contents of a text file
+
+```{r}
+path <- system.file("exdata", "file.txt",
+                    package = "pkgTemplateR")
+print_file_content(file_path = path)
+```
+
+
+\newpage
+```{r}
+sessionInfo()
+```
+
+
