@@ -24,5 +24,6 @@ Suggests:
     knitr,
     lintr,
     rmarkdown,
-    testthat
+    testthat,
+    badger
 VignetteBuilder: knitr
