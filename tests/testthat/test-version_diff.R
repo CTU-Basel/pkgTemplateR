@@ -1,4 +1,4 @@
-context("version increment - DESCRIPTION/README badge")
+context("version increment - DESCRIPTION/README badge/NEWS")
 
 skip_on_cran()
 skip_on_appveyor()
@@ -15,6 +15,7 @@ if (length(return_code) == 0) {
 
 grep_version <- grep("Version: \\d\\.\\d\\.\\d", return_code)
 grep_badge <- grep("https://img.shields.io/badge/", return_code)
+grep_news <- grep("NEWS.md", return_code)
 
 # should return length 2 if the Version number has changed
 # this will only check if the developer locally runs the tests
@@ -25,4 +26,8 @@ test_that("Version number has been incremented in DESCRIPTION", {
 
 test_that("Version number has been incremented in README badge", {
   expect_true(length(grep_badge) >= 2)
+})
+
+test_that("NEWS.md has been extended", {
+  expect_true(length(grep_news) >= 2)
 })
