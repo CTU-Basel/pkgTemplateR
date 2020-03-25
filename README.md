@@ -2,20 +2,22 @@
 <!-- README.md is generated from README.Rmd. Please edit that file -->
 
 
-# pkgTemplateR ![travis](https://api.travis-ci.com/CTU-Basel/pkgTemplateR.svg?branch=master) [![codecov](https://codecov.io/github/CTU-Basel/pkgTemplateR/branch/master/graphs/badge.svg)](https://codecov.io/github/CTU-Basel/pkgTemplateR) `r badger::badge_custom("dev version", installed.packages()["pkgTemplateR", "Version"], "blue", "https://github.com/CTU-Basel/pkgTemplateR")` [![AppVeyor Build Status](https://ci.appveyor.com/api/projects/status/github/CTU-Basel/pkgTemplateR?branch=master&svg=true)](https://ci.appveyor.com/project/CTU-Basel/pkgTemplateR)
+# pkgTemplateR ![travis](https://api.travis-ci.com/CTU-Basel/pkgTemplateR.svg?branch=master) [![codecov](https://codecov.io/github/CTU-Basel/pkgTemplateR/branch/master/graphs/badge.svg)](https://codecov.io/github/CTU-Basel/pkgTemplateR) [![](https://img.shields.io/badge/dev%20version-0.0.1-blue.svg)](https://github.com/CTU-Basel/pkgTemplateR) [![AppVeyor Build Status](https://ci.appveyor.com/api/projects/status/github/CTU-Basel/pkgTemplateR?branch=master&svg=true)](https://ci.appveyor.com/project/CTU-Basel/pkgTemplateR)
 
 
 An R package to to do something...
 
 ## Installing from github with devtools
 
-```{r, eval = FALSE}
+
+```r
 devtools::install_github("CTU-Basel/pkgTemplateR")
 ```
 
 ## Basic usage
 Load the package
-```{r, echo = TRUE, warning=FALSE, message=FALSE}
+
+```r
 # load the package
 library(pkgTemplateR)
 # internal file of the package
@@ -25,10 +27,15 @@ path <- system.file("exdata", "file.txt",
 print_file_content(file_path = path)
 ```
 
+```
+## Hello world!
+```
+
 ## For contributors
 ### Testing with devtools
 
-```{r, eval = FALSE}
+
+```r
 # run tests, this assumes you are one directory up from the pkgTemplateR dir
 devtools::test("pkgTemplateR")
 # spell check
@@ -39,7 +46,8 @@ devtools::spell_check("pkgTemplateR", ignore = ignore_words)
 
 ### Linting with lintr
 
-```{r, eval = FALSE}
+
+```r
 # lint the package -> should be clean
 library(lintr)
 lint_package("pkgTemplateR", linters = with_defaults(camel_case_linter = NULL,
@@ -48,7 +56,8 @@ lint_package("pkgTemplateR", linters = with_defaults(camel_case_linter = NULL,
 ```
 
 ### Building the vignette
-```{r, eval = FALSE}
+
+```r
 library(rmarkdown)
 render("vignettes/pkgTemplateR-package-vignette.Rmd",
        output_format=c("pdf_document"))
@@ -61,13 +70,15 @@ It must therefore be compiled. Changes should be made in the `README.Rmd`
 file and the file "knited" with R. This is easiest with RStudio, but other
 methods are available.
 
-```{r, eval = FALSE}
+
+```r
 library(knitr)
 knit("README.Rmd")
 ```
 
 ### Building the `pkgdown` site
-```{r, eval = FALSE}
+
+```r
 library(pkgdown)
 build_site()
 ```
@@ -79,7 +90,8 @@ the specific `roxygen2` documentation of the functions relying on the dependency
 be as explicit as possible. i.e. Just import functions that are needed and not entire packages.
 
 Example to import `str_match` `str_length` `str_wrap` from the `stringr` package:
-```{r, eval = FALSE}
+
+```r
 #' @importFrom stringr str_match str_length str_wrap
 ```
 

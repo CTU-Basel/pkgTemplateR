@@ -1,6 +1,6 @@
 Package: pkgTemplateR
 Title: What the Package Does (One Line, Title Case)
-Version: 0.0.0.9000
+Version: 0.0.1
 Authors:
     c(person(given = "First",
            family = "Last",
@@ -16,3 +16,14 @@ Description: What the package does (one paragraph).
 License: MIT
 Encoding: UTF-8
 LazyData: true
+RoxygenNote: 7.0.2
+Depends:
+    R (>= 3.5)
+Imports:
+    readr
+Suggests:
+    knitr,
+    lintr,
+    rmarkdown,
+    testthat
+VignetteBuilder: knitr
