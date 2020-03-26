@@ -6,7 +6,17 @@
 
 **Template created by Patrick R. Wright**
 
-An R package to to do something...
+If you would like to make use of this template just click the green
+"Use this template" button and set up your new R package repository
+as usual on github.
+
+If you want to work with the continuous integration (CI) modules you
+will need to grant [travis](https://travis-ci.com/) and [AppVeyor](https://ci.appveyor.com)
+access to your repository. The config files ([.travis.yml](.travis.yml),
+[appveyor.yml](appveyor.yml)) for travis and AppVeyor are already in the repository.
+
+You will also need to search and replace all occurences of `pkgTemplateR` with
+the name that you have chosen for your R package.
 
 ## Installing from github with devtools
 
