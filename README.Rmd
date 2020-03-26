@@ -7,8 +7,8 @@
 **Template created by Patrick R. Wright**
 
 If you would like to make use of this template just click the green
-"Use this template" button and set up your new R package repository
-as usual on github.
+"Use this template" button or use [this link](https://github.com/CTU-Basel/pkgTemplateR/generate)
+to it and set up your new R package repository as usual on github.
 
 If you want to work with the continuous integration (CI) modules you
 will need to grant [travis](https://travis-ci.com/) and [AppVeyor](https://ci.appveyor.com)
