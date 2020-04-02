@@ -1,7 +1,7 @@
 Package: pkgTemplateR
 Title: What the Package Does (One Line, Title Case)
 Version: 0.0.1
-Author:
+Authors@R:
     c(person(given = "First",
              family = "Last",
              role = c("aut", "cre"),
@@ -10,7 +10,7 @@ Author:
              family = "Smith",
              role = c("aut"),
              email = "john.smith@example.com"))
-Maintainer: First Last <first.last@example.com>, John Smith <john.smith@example.com>
+Maintainer: First Last <first.last@example.com>
 Description: What the package does (one paragraph).
 License: MIT + file LICENSE
 Encoding: UTF-8
