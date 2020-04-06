@@ -50,7 +50,7 @@ devtools::install_github("CTU-Basel/pkgTemplateR")
 # load
 library(pkgTemplateR)
 # show pkgTemplateR version
-installed.packages()["pkgTemplateR", "Version"]
+packageVersion("pkgTemplateR")
 ```
 
 # Printing the contents of a text file
