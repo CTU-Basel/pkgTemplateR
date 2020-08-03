@@ -1,7 +1,5 @@
 context("print file content")
 
-library(stringr)
-
 path <- system.file("exdata", "file.txt",
                     package = "pkgTemplateR")
 
