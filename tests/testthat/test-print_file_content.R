@@ -10,5 +10,5 @@ test_that("Test fail", {
 
 test_that("Test output", {
   expect_equal(NULL, print_file_content(path))
-  expect_equal("Hello world!", capture.output(print_file_content(path)))
+  expect_equal("Hello world!", str_replace_all(capture.output(print_file_content(path)), "[\r\n]" , ""))
 })
