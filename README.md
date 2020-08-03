@@ -1,24 +1,28 @@
 
 <!-- README.md is generated from README.Rmd. Please edit that file -->
 
-
-# pkgTemplateR ![travis](https://api.travis-ci.com/CTU-Basel/pkgTemplateR.svg?branch=master) [![codecov](https://codecov.io/github/CTU-Basel/pkgTemplateR/branch/master/graphs/badge.svg)](https://codecov.io/github/CTU-Basel/pkgTemplateR) [![](https://img.shields.io/badge/dev%20version-0.0.1-blue.svg)](https://github.com/CTU-Basel/pkgTemplateR) [![AppVeyor Build Status](https://ci.appveyor.com/api/projects/status/github/CTU-Basel/pkgTemplateR?branch=master&svg=true)](https://ci.appveyor.com/project/CTU-Basel/pkgTemplateR)
+# pkgTemplateR [![](https://img.shields.io/badge/dev%20version-0.0.1-blue.svg)](https://github.com/CTU-Basel/pkgTemplateR) [![AppVeyor Build Status](https://ci.appveyor.com/project/CTU-Basel/pkgTemplateR)](https://ci.appveyor.com/project/CTU-Basel/pkgTemplateR) [![travis](https://api.travis-ci.com/CTU-Basel/pkgTemplateR.svg?branch=master)](https://api.travis-ci.com/CTU-Basel/pkgTemplateR.svg?branch=master) [![codecov](https://codecov.io/github/CTU-Basel/pkgTemplateR/branch/master/graphs/badge.svg)](https://codecov.io/github/CTU-Basel/pkgTemplateR)
 
 **Template created by Patrick R. Wright**
 
 If you would like to make use of this template just click the green
 "Use this template" button or use [this link](https://github.com/CTU-Basel/pkgTemplateR/generate)
-to it and set up your new R package repository as usual on github.
+to it and set up your new R package repository as usual on GitHub.
 
 If you want to work with the continuous integration (CI) modules you
 will need to grant [travis](https://travis-ci.com/) and [AppVeyor](https://ci.appveyor.com)
 access to your repository. The config files ([.travis.yml](.travis.yml),
 [appveyor.yml](appveyor.yml)) for travis and AppVeyor are already in the repository.
+GitHub actions builds have already been set up too. They will check if the
+package runs on Linux, Windows and macOS. Furthermore they will render
+the pkgdown page. For the packagedown page you will need to configure
+the GitHub Pages part in the Settings to use the gh-pages branch and the
+root directory within.
 
 You will also need to search and replace all occurences of `pkgTemplateR` with
 the name that you have chosen for your R package.
 
-## Installing from github with devtools
+## Installing from GitHub with devtools
 
 
 ```r
@@ -85,13 +89,6 @@ methods are available.
 ```r
 library(knitr)
 knit("README.Rmd")
-```
-
-### Building the `pkgdown` site
-
-```r
-library(pkgdown)
-build_site()
 ```
 
 ### Handling dependencies
