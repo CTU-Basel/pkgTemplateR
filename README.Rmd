@@ -8,17 +8,22 @@
 
 If you would like to make use of this template just click the green
 "Use this template" button or use [this link](https://github.com/CTU-Basel/pkgTemplateR/generate)
-to it and set up your new R package repository as usual on github.
+to it and set up your new R package repository as usual on GitHub.
 
 If you want to work with the continuous integration (CI) modules you
 will need to grant [travis](https://travis-ci.com/) and [AppVeyor](https://ci.appveyor.com)
 access to your repository. The config files ([.travis.yml](.travis.yml),
 [appveyor.yml](appveyor.yml)) for travis and AppVeyor are already in the repository.
+GitHub actions builds have already been set up too. They will check if the
+package runs on Linux, Windows and macOS. Furthermore they will render
+the pkgdown page. For the packagedown page you will need to configure
+the GitHub Pages part in the Settings to use the gh-pages branch and the
+root directory within.
 
 You will also need to search and replace all occurences of `pkgTemplateR` with
 the name that you have chosen for your R package.
 
-## Installing from github with devtools
+## Installing from GitHub with devtools
 
 ```{r, eval = FALSE}
 devtools::install_github("CTU-Basel/pkgTemplateR")
@@ -75,12 +80,6 @@ methods are available.
 ```{r, eval = FALSE}
 library(knitr)
 knit("README.Rmd")
-```
-
-### Building the `pkgdown` site
-```{r, eval = FALSE}
-library(pkgdown)
-build_site()
 ```
 
 ### Handling dependencies
