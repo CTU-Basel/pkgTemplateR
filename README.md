@@ -1,7 +1,7 @@
 
 <!-- README.md is generated from README.Rmd. Please edit that file -->
 
-# pkgTemplateR [![](https://img.shields.io/badge/dev%20version-0.0.1-blue.svg)](https://github.com/CTU-Basel/pkgTemplateR) [![AppVeyor Build Status](https://ci.appveyor.com/project/CTU-Basel/pkgTemplateR)](https://ci.appveyor.com/project/CTU-Basel/pkgTemplateR) [![travis](https://api.travis-ci.com/CTU-Basel/pkgTemplateR.svg?branch=master)](https://api.travis-ci.com/CTU-Basel/pkgTemplateR.svg?branch=master) [![codecov](https://codecov.io/github/CTU-Basel/pkgTemplateR/branch/master/graphs/badge.svg)](https://codecov.io/github/CTU-Basel/pkgTemplateR)
+# pkgTemplateR [![](https://img.shields.io/badge/dev%20version-0.0.1-blue.svg)](https://github.com/CTU-Basel/pkgTemplateR) [![AppVeyor Build Status](https://ci.appveyor.com/api/projects/status/github/pkgTemplateR/pkgTemplateR?branch=master&svg=true)](https://ci.appveyor.com/project/CTU-Basel/pkgTemplateR) [![travis](https://api.travis-ci.com/CTU-Basel/pkgTemplateR.svg?branch=master)](https://api.travis-ci.com/CTU-Basel/pkgTemplateR.svg?branch=master) [![codecov](https://codecov.io/github/CTU-Basel/pkgTemplateR/branch/master/graphs/badge.svg)](https://codecov.io/github/CTU-Basel/pkgTemplateR)
 
 **Template created by Patrick R. Wright**
 
@@ -81,15 +81,9 @@ render("vignettes/pkgTemplateR-package-vignette.Rmd",
 ### Generating the README file
 
 The README file contains both standard text and interpreted R code.
-It must therefore be compiled. Changes should be made in the `README.Rmd`
-file and the file "knited" with R. This is easiest with RStudio, but other
-methods are available.
-
-
-```r
-library(knitr)
-knit("README.Rmd")
-```
+Changes should be made in the `README.Rmd` file and the file "knited" with R.
+In this template the knitting of the Rmd file is performed automatically with
+GitHub actions.
 
 ### Handling dependencies
 
@@ -122,14 +116,12 @@ After you have made your changes please run the
 [tests](README.md#testing-with-devtools)
 and 
 [lint](README.md#linting-with-lintr) your code as 
-indicated above. Please also increment the version number and recompile the
-`README.md` to increment the dev-version badge (requires installing the
-package after editing the `DESCRIPTION` file). If all tests pass and linting
+indicated above. Please also increment the version number. If all tests pass and linting
 confirms that your coding style conforms you can send a pull request (PR).
 Changes should also be mentioned in the `NEWS` file. A test has been implemented
 to remind you to make these changes (see [here](tests/testthat/test-version_diff.R)).
 The PR should have a description to help the reviewer understand what has been 
 added/changed. New functionalities must be thoroughly documented, have examples 
 and should be accompanied by at least one [test](tests/testthat/) to ensure long term 
-robustness. The PR will only be reviewed if all travis and AppVeyor checks are successful. 
+robustness. The PR will only be reviewed if all travis, AppVeyor and GitHub actions checks are successful.
 The person sending the PR should not be the one merging it.
