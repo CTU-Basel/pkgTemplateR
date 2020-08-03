@@ -99,34 +99,27 @@
 </h1>
 <p>Let’s get started by installing the package straight from <a href="https://github.com/SwissClinicalTrialOrganisation/secuTrialR"></a> and then loading it. For this you will need to have <code>devtools</code> installed. We are planning to add <code>secuTrialR</code> to CRAN but we are not there yet. If you are working on Windows and would like to install with <code>devtools</code> you will likely need to install <a href="https://cran.r-project.org/bin/windows/Rtools/"></a>.</p>
 
-<div class="sourceCode" id="cb1"><pre class="downlit">
-<span class="co"># install</span>
-<span class="kw">devtools</span>::<span class="fu">install_github</span>(<span class="st">"CTU-Basel/pkgTemplateR"</span>)
-</pre></div>
+<div class="sourceCode" id="cb1"><html><body><pre class="r"><span class="co"># install</span>
+<span class="kw pkg">devtools</span><span class="kw ns">::</span><span class="fu"><a href="https://devtools.r-lib.org//reference/remote-reexports.html">install_github</a></span>(<span class="st">"CTU-Basel/pkgTemplateR"</span>)</pre></body></html></div>
 </div>
 <div id="loading-the-package" class="section level1">
 <h1 class="hasAnchor">
 <a href="#loading-the-package" class="anchor"></a>Loading the package</h1>
-<div class="sourceCode" id="cb2"><pre class="downlit">
-<span class="co"># load</span>
-<span class="fu"><a href="https://rdrr.io/r/base/library.html">library</a></span>(<span class="kw">pkgTemplateR</span>)
+<div class="sourceCode" id="cb2"><html><body><pre class="r"><span class="co"># load</span>
+<span class="fu"><a href="https://rdrr.io/r/base/library.html">library</a></span>(<span class="no">pkgTemplateR</span>)
 <span class="co"># show pkgTemplateR version</span>
 <span class="fu"><a href="https://rdrr.io/r/utils/packageDescription.html">packageVersion</a></span>(<span class="st">"pkgTemplateR"</span>)
-<span class="co">#&gt; [1] '0.0.1'</span>
-</pre></div>
+<span class="co">#&gt; [1] '0.0.1'</span></pre></body></html></div>
 </div>
 <div id="printing-the-contents-of-a-text-file" class="section level1">
 <h1 class="hasAnchor">
 <a href="#printing-the-contents-of-a-text-file" class="anchor"></a>Printing the contents of a text file</h1>
-<div class="sourceCode" id="cb3"><pre class="downlit">
-<span class="kw">path</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://rdrr.io/r/base/system.file.html">system.file</a></span>(<span class="st">"exdata"</span>, <span class="st">"file.txt"</span>,
-                    package = <span class="st">"pkgTemplateR"</span>)
-<span class="fu"><a href="../reference/print_file_content.html">print_file_content</a></span>(file_path = <span class="kw">path</span>)
-<span class="co">#&gt; Hello world!</span>
-</pre></div>
+<div class="sourceCode" id="cb3"><html><body><pre class="r"><span class="no">path</span> <span class="kw">&lt;-</span> <span class="fu"><a href="https://rdrr.io/r/base/system.file.html">system.file</a></span>(<span class="st">"exdata"</span>, <span class="st">"file.txt"</span>,
+                    <span class="kw">package</span> <span class="kw">=</span> <span class="st">"pkgTemplateR"</span>)
+<span class="fu"><a href="../reference/print_file_content.html">print_file_content</a></span>(<span class="kw">file_path</span> <span class="kw">=</span> <span class="no">path</span>)
+<span class="co">#&gt; Hello world!</span></pre></body></html></div>
 <div style="page-break-after: always;"></div>
-<div class="sourceCode" id="cb4"><pre class="downlit">
-<span class="fu"><a href="https://rdrr.io/r/utils/sessionInfo.html">sessionInfo</a></span>()
+<div class="sourceCode" id="cb4"><html><body><pre class="r"><span class="fu"><a href="https://rdrr.io/r/utils/sessionInfo.html">sessionInfo</a></span>()
 <span class="co">#&gt; R version 4.0.2 (2020-06-22)</span>
 <span class="co">#&gt; Platform: x86_64-apple-darwin17.0 (64-bit)</span>
 <span class="co">#&gt; Running under: macOS Catalina 10.15.6</span>
@@ -145,15 +138,14 @@
 <span class="co">#&gt; [1] pkgTemplateR_0.0.1</span>
 <span class="co">#&gt; </span>
 <span class="co">#&gt; loaded via a namespace (and not attached):</span>
-<span class="co">#&gt;  [1] Rcpp_1.0.5         knitr_1.29         magrittr_1.5       hms_0.5.3         </span>
-<span class="co">#&gt;  [5] R6_2.4.1           rlang_0.4.7        stringr_1.4.0      tools_4.0.2       </span>
-<span class="co">#&gt;  [9] xfun_0.16          htmltools_0.5.0    ellipsis_0.3.1     yaml_2.2.1        </span>
-<span class="co">#&gt; [13] assertthat_0.2.1   rprojroot_1.3-2    digest_0.6.25      tibble_3.0.3      </span>
-<span class="co">#&gt; [17] lifecycle_0.2.0    pkgdown_1.5.1.9000 crayon_1.3.4       readr_1.3.1       </span>
-<span class="co">#&gt; [21] vctrs_0.3.2        fs_1.5.0           memoise_1.1.0      evaluate_0.14     </span>
-<span class="co">#&gt; [25] rmarkdown_2.3      stringi_1.4.6      compiler_4.0.2     pillar_1.4.6      </span>
-<span class="co">#&gt; [29] desc_1.2.0         backports_1.1.8    pkgconfig_2.0.3</span>
-</pre></div>
+<span class="co">#&gt;  [1] Rcpp_1.0.5       knitr_1.29       magrittr_1.5     hms_0.5.3       </span>
+<span class="co">#&gt;  [5] MASS_7.3-51.6    R6_2.4.1         rlang_0.4.7      stringr_1.4.0   </span>
+<span class="co">#&gt;  [9] tools_4.0.2      xfun_0.16        htmltools_0.5.0  ellipsis_0.3.1  </span>
+<span class="co">#&gt; [13] yaml_2.2.1       assertthat_0.2.1 digest_0.6.25    rprojroot_1.3-2 </span>
+<span class="co">#&gt; [17] lifecycle_0.2.0  tibble_3.0.3     pkgdown_1.5.1    crayon_1.3.4    </span>
+<span class="co">#&gt; [21] readr_1.3.1      vctrs_0.3.2      fs_1.5.0         memoise_1.1.0   </span>
+<span class="co">#&gt; [25] evaluate_0.14    rmarkdown_2.3    stringi_1.4.6    pillar_1.4.6    </span>
+<span class="co">#&gt; [29] compiler_4.0.2   desc_1.2.0       backports_1.1.8  pkgconfig_2.0.3</span></pre></body></html></div>
 </div>
   </div>
 
@@ -172,7 +164,7 @@
 </div>
 
 <div class="pkgdown">
-  <p>Site built with <a href="https://pkgdown.r-lib.org/">pkgdown</a> 1.5.1.9000.</p>
+  <p>Site built with <a href="https://pkgdown.r-lib.org/">pkgdown</a> 1.5.1.</p>
 </div>
 
       </footer>

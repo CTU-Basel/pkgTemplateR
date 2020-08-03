@@ -76,7 +76,7 @@
   <div class="contents col-md-9">
 <div id="pkgtemplater--appveyor-build-status-travis-codecov" class="section level1">
 <div class="page-header"><h1 class="hasAnchor">
-<a href="#pkgtemplater--appveyor-build-status-travis-codecov" class="anchor"></a>pkgTemplateR <a href="https://github.com/CTU-Basel/pkgTemplateR"><img src="https://img.shields.io/badge/dev%20version-0.0.1-blue.svg"></a> <a href="https://ci.appveyor.com/project/CTU-Basel/pkgTemplateR"><img src="https://ci.appveyor.com/project/CTU-Basel/pkgTemplateR" alt="AppVeyor Build Status"></a> <a href="https://api.travis-ci.com/CTU-Basel/pkgTemplateR.svg?branch=master"><img src="https://api.travis-ci.com/CTU-Basel/pkgTemplateR.svg?branch=master" alt="travis"></a> <a href="https://codecov.io/github/CTU-Basel/pkgTemplateR"><img src="https://codecov.io/github/CTU-Basel/pkgTemplateR/branch/master/graphs/badge.svg" alt="codecov"></a>
+<a href="#pkgtemplater--appveyor-build-status-travis-codecov" class="anchor"></a>pkgTemplateR <a href="https://github.com/CTU-Basel/pkgTemplateR"><img src="https://img.shields.io/badge/dev%20version-0.0.1-blue.svg"></a> <a href="https://ci.appveyor.com/project/CTU-Basel/pkgTemplateR"><img src="https://ci.appveyor.com/api/projects/status/github/pkgTemplateR/pkgTemplateR?branch=master&amp;svg=true" alt="AppVeyor Build Status"></a> <a href="https://api.travis-ci.com/CTU-Basel/pkgTemplateR.svg?branch=master"><img src="https://api.travis-ci.com/CTU-Basel/pkgTemplateR.svg?branch=master" alt="travis"></a> <a href="https://codecov.io/github/CTU-Basel/pkgTemplateR"><img src="https://codecov.io/github/CTU-Basel/pkgTemplateR/branch/master/graphs/badge.svg" alt="codecov"></a>
 </h1></div>
 <p><strong>Template created by Patrick R. Wright</strong></p>
 <p>If you would like to make use of this template just click the green “Use this template” button or use <a href="https://github.com/CTU-Basel/pkgTemplateR/generate">this link</a> to it and set up your new R package repository as usual on GitHub.</p>
@@ -85,24 +85,21 @@
 <div id="installing-from-github-with-devtools" class="section level2">
 <h2 class="hasAnchor">
 <a href="#installing-from-github-with-devtools" class="anchor"></a>Installing from GitHub with devtools</h2>
-<div class="sourceCode" id="cb1"><pre class="downlit">
-<span class="kw">devtools</span>::<span class="fu">install_github</span>(<span class="st">"CTU-Basel/pkgTemplateR"</span>)
-</pre></div>
+<div class="sourceCode" id="cb1"><pre class="sourceCode R"><code class="sourceCode r"><span id="cb1-1"><a href="#cb1-1"></a>devtools<span class="op">::</span><span class="kw">install_github</span>(<span class="st">"CTU-Basel/pkgTemplateR"</span>)</span></code></pre></div>
 </div>
 <div id="basic-usage" class="section level2">
 <h2 class="hasAnchor">
 <a href="#basic-usage" class="anchor"></a>Basic usage</h2>
 <p>Load the package</p>
-<div class="sourceCode" id="cb2"><pre class="downlit">
-<span class="co"># load the package</span>
-<span class="fu"><a href="https://rdrr.io/r/base/library.html">library</a></span>(<span class="kw">pkgTemplateR</span>)
-<span class="co"># internal file of the package</span>
-<span class="kw">path</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://rdrr.io/r/base/system.file.html">system.file</a></span>(<span class="st">"exdata"</span>, <span class="st">"file.txt"</span>,
-                    package = <span class="st">"pkgTemplateR"</span>)
-<span class="co"># print it</span>
-<span class="fu"><a href="reference/print_file_content.html">print_file_content</a></span>(file_path = <span class="kw">path</span>)
-</pre></div>
-<pre><code>## Hello world!</code></pre>
+<div class="sourceCode" id="cb2"><pre class="sourceCode R"><code class="sourceCode r"><span id="cb2-1"><a href="#cb2-1"></a><span class="co"># load the package</span></span>
+<span id="cb2-2"><a href="#cb2-2"></a><span class="kw">library</span>(pkgTemplateR)</span>
+<span id="cb2-3"><a href="#cb2-3"></a><span class="co"># internal file of the package</span></span>
+<span id="cb2-4"><a href="#cb2-4"></a>path &lt;-<span class="st"> </span><span class="kw">system.file</span>(<span class="st">"exdata"</span>, <span class="st">"file.txt"</span>,</span>
+<span id="cb2-5"><a href="#cb2-5"></a>                    <span class="dt">package =</span> <span class="st">"pkgTemplateR"</span>)</span>
+<span id="cb2-6"><a href="#cb2-6"></a><span class="co"># print it</span></span>
+<span id="cb2-7"><a href="#cb2-7"></a><span class="kw">print_file_content</span>(<span class="dt">file_path =</span> path)</span>
+<span id="cb2-8"><a href="#cb2-8"></a></span>
+<span id="cb2-9"><a href="#cb2-9"></a><span class="co">## Hello world!</span></span></code></pre></div>
 </div>
 <div id="for-contributors" class="section level2">
 <h2 class="hasAnchor">
@@ -110,66 +107,54 @@
 <div id="testing-with-devtools" class="section level3">
 <h3 class="hasAnchor">
 <a href="#testing-with-devtools" class="anchor"></a>Testing with devtools</h3>
-<div class="sourceCode" id="cb4"><pre class="downlit">
-<span class="co"># run tests, this assumes you are one directory up from the pkgTemplateR dir</span>
-<span class="kw">devtools</span>::<span class="fu">test</span>(<span class="st">"pkgTemplateR"</span>)
-<span class="co"># spell check</span>
-<span class="co"># ignore words character vector allows to exclude technical terms in the check</span>
-<span class="kw">ignore_words</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://rdrr.io/r/base/c.html">c</a></span>()
-<span class="kw">devtools</span>::<span class="fu">spell_check</span>(<span class="st">"pkgTemplateR"</span>, ignore = <span class="kw">ignore_words</span>)
-</pre></div>
+<div class="sourceCode" id="cb3"><pre class="sourceCode R"><code class="sourceCode r"><span id="cb3-1"><a href="#cb3-1"></a><span class="co"># run tests, this assumes you are one directory up from the pkgTemplateR dir</span></span>
+<span id="cb3-2"><a href="#cb3-2"></a>devtools<span class="op">::</span><span class="kw">test</span>(<span class="st">"pkgTemplateR"</span>)</span>
+<span id="cb3-3"><a href="#cb3-3"></a><span class="co"># spell check</span></span>
+<span id="cb3-4"><a href="#cb3-4"></a><span class="co"># ignore words character vector allows to exclude technical terms in the check</span></span>
+<span id="cb3-5"><a href="#cb3-5"></a>ignore_words &lt;-<span class="st"> </span><span class="kw">c</span>()</span>
+<span id="cb3-6"><a href="#cb3-6"></a>devtools<span class="op">::</span><span class="kw">spell_check</span>(<span class="st">"pkgTemplateR"</span>, <span class="dt">ignore =</span> ignore_words)</span></code></pre></div>
 </div>
 <div id="linting-with-lintr" class="section level3">
 <h3 class="hasAnchor">
 <a href="#linting-with-lintr" class="anchor"></a>Linting with lintr</h3>
-<div class="sourceCode" id="cb5"><pre class="downlit">
-<span class="co"># lint the package -&gt; should be clean</span>
-<span class="fu"><a href="https://rdrr.io/r/base/library.html">library</a></span>(<span class="kw"><a href="https://github.com/jimhester/lintr">lintr</a></span>)
-<span class="fu"><a href="https://rdrr.io/pkg/lintr/man/lint_package.html">lint_package</a></span>(<span class="st">"pkgTemplateR"</span>, linters = <span class="fu"><a href="https://rdrr.io/pkg/lintr/man/with_defaults.html">with_defaults</a></span>(camel_case_linter = <span class="kw">NULL</span>,
-                                                     object_usage_linter = <span class="kw">NULL</span>,
-                                                     <span class="fu"><a href="https://rdrr.io/pkg/lintr/man/linters.html">line_length_linter</a></span>(<span class="fl">125</span>)))
-</pre></div>
+<div class="sourceCode" id="cb4"><pre class="sourceCode R"><code class="sourceCode r"><span id="cb4-1"><a href="#cb4-1"></a><span class="co"># lint the package -&gt; should be clean</span></span>
+<span id="cb4-2"><a href="#cb4-2"></a><span class="kw">library</span>(lintr)</span>
+<span id="cb4-3"><a href="#cb4-3"></a><span class="kw">lint_package</span>(<span class="st">"pkgTemplateR"</span>, <span class="dt">linters =</span> <span class="kw">with_defaults</span>(<span class="dt">camel_case_linter =</span> <span class="ot">NULL</span>,</span>
+<span id="cb4-4"><a href="#cb4-4"></a>                                                     <span class="dt">object_usage_linter =</span> <span class="ot">NULL</span>,</span>
+<span id="cb4-5"><a href="#cb4-5"></a>                                                     <span class="kw">line_length_linter</span>(<span class="dv">125</span>)))</span></code></pre></div>
 </div>
 <div id="building-the-vignette" class="section level3">
 <h3 class="hasAnchor">
 <a href="#building-the-vignette" class="anchor"></a>Building the vignette</h3>
-<div class="sourceCode" id="cb6"><pre class="downlit">
-<span class="fu"><a href="https://rdrr.io/r/base/library.html">library</a></span>(<span class="kw"><a href="https://github.com/rstudio/rmarkdown">rmarkdown</a></span>)
-<span class="fu"><a href="https://rdrr.io/pkg/rmarkdown/man/render.html">render</a></span>(<span class="st">"vignettes/pkgTemplateR-package-vignette.Rmd"</span>,
-       output_format=<span class="fu"><a href="https://rdrr.io/r/base/c.html">c</a></span>(<span class="st">"pdf_document"</span>))
-</pre></div>
+<div class="sourceCode" id="cb5"><pre class="sourceCode R"><code class="sourceCode r"><span id="cb5-1"><a href="#cb5-1"></a><span class="kw">library</span>(rmarkdown)</span>
+<span id="cb5-2"><a href="#cb5-2"></a><span class="kw">render</span>(<span class="st">"vignettes/pkgTemplateR-package-vignette.Rmd"</span>,</span>
+<span id="cb5-3"><a href="#cb5-3"></a>       <span class="dt">output_format=</span><span class="kw">c</span>(<span class="st">"pdf_document"</span>))</span></code></pre></div>
 </div>
 <div id="generating-the-readme-file" class="section level3">
 <h3 class="hasAnchor">
 <a href="#generating-the-readme-file" class="anchor"></a>Generating the README file</h3>
-<p>The README file contains both standard text and interpreted R code. It must therefore be compiled. Changes should be made in the <code>README.Rmd</code> file and the file “knited” with R. This is easiest with RStudio, but other methods are available.</p>
-<div class="sourceCode" id="cb7"><pre class="downlit">
-<span class="fu"><a href="https://rdrr.io/r/base/library.html">library</a></span>(<span class="kw"><a href="https://yihui.org/knitr">knitr</a></span>)
-<span class="fu"><a href="https://rdrr.io/pkg/knitr/man/knit.html">knit</a></span>(<span class="st">"README.Rmd"</span>)
-</pre></div>
+<p>The README file contains both standard text and interpreted R code. Changes should be made in the <code>README.Rmd</code> file and the file “knited” with R. In this template the knitting of the Rmd file is performed automatically with GitHub actions.</p>
 </div>
 <div id="handling-dependencies" class="section level3">
 <h3 class="hasAnchor">
 <a href="#handling-dependencies" class="anchor"></a>Handling dependencies</h3>
 <p>Dependencies to other R packages are to be declared in the <code>DESCRIPTION</code> file under <code>Imports:</code> and in the specific <code>roxygen2</code> documentation of the functions relying on the dependency. It is suggested to be as explicit as possible. i.e. Just import functions that are needed and not entire packages.</p>
 <p>Example to import <code>str_match</code> <code>str_length</code> <code>str_wrap</code> from the <code>stringr</code> package:</p>
-<div class="sourceCode" id="cb8"><pre class="downlit">
-<span class="co">#' @importFrom stringr str_match str_length str_wrap</span>
-</pre></div>
+<div class="sourceCode" id="cb6"><pre class="sourceCode R"><code class="sourceCode r"><span id="cb6-1"><a href="#cb6-1"></a><span class="co">#' @importFrom stringr str_match str_length str_wrap</span></span></code></pre></div>
 </div>
 <div id="preparing-a-release-on-cran" class="section level3">
 <h3 class="hasAnchor">
 <a href="#preparing-a-release-on-cran" class="anchor"></a>Preparing a release on CRAN</h3>
-<div class="sourceCode" id="cb9"><pre class="sourceCode bash"><code class="sourceCode bash"><span id="cb9-1"><a href="#cb9-1"></a><span class="co"># build the package archive</span></span>
-<span id="cb9-2"><a href="#cb9-2"></a><span class="ex">R</span> CMD build pkgTemplateR</span>
-<span id="cb9-3"><a href="#cb9-3"></a><span class="co"># check the archive (should return "Status: OK", no WARNINGs, no NOTEs)</span></span>
-<span id="cb9-4"><a href="#cb9-4"></a><span class="co"># in this example for version 0.0.1</span></span>
-<span id="cb9-5"><a href="#cb9-5"></a><span class="ex">R</span> CMD check pkgTemplateR_0.0.1.tar.gz</span></code></pre></div>
+<div class="sourceCode" id="cb7"><pre class="sourceCode R"><code class="sourceCode r"><span id="cb7-1"><a href="#cb7-1"></a><span class="co"># build the package archive</span></span>
+<span id="cb7-2"><a href="#cb7-2"></a>R CMD build pkgTemplateR</span>
+<span id="cb7-3"><a href="#cb7-3"></a><span class="co"># check the archive (should return "Status: OK", no WARNINGs, no NOTEs)</span></span>
+<span id="cb7-4"><a href="#cb7-4"></a><span class="co"># in this example for version 0.0.1</span></span>
+<span id="cb7-5"><a href="#cb7-5"></a>R CMD check pkgTemplateR_<span class="dv">0</span>.<span class="dv">0</span>.<span class="fl">1.</span>tar.gz</span></code></pre></div>
 </div>
 <div id="guidelines-for-contributors" class="section level3">
 <h3 class="hasAnchor">
 <a href="#guidelines-for-contributors" class="anchor"></a>Guidelines for contributors</h3>
-<p>Requests for new features and bug fixes should first be documented as an <a href="https://github.com/">Issue</a> on GitHub. Subsequently, in order to contribute to this R package you should fork the main repository. After you have made your changes please run the <a href="README.md#testing-with-devtools">tests</a> and <a href="README.md#linting-with-lintr">lint</a> your code as indicated above. Please also increment the version number and recompile the <code>README.md</code> to increment the dev-version badge (requires installing the package after editing the <code>DESCRIPTION</code> file). If all tests pass and linting confirms that your coding style conforms you can send a pull request (PR). Changes should also be mentioned in the <code>NEWS</code> file. A test has been implemented to remind you to make these changes (see <a href="tests/testthat/test-version_diff.R">here</a>). The PR should have a description to help the reviewer understand what has been added/changed. New functionalities must be thoroughly documented, have examples and should be accompanied by at least one <a href="tests/testthat/">test</a> to ensure long term robustness. The PR will only be reviewed if all travis and AppVeyor checks are successful. The person sending the PR should not be the one merging it.</p>
+<p>Requests for new features and bug fixes should first be documented as an <a href="https://github.com/">Issue</a> on GitHub. Subsequently, in order to contribute to this R package you should fork the main repository. After you have made your changes please run the <a href="README.md#testing-with-devtools">tests</a> and <a href="README.md#linting-with-lintr">lint</a> your code as indicated above. Please also increment the version number. If all tests pass and linting confirms that your coding style conforms you can send a pull request (PR). Changes should also be mentioned in the <code>NEWS</code> file. A test has been implemented to remind you to make these changes (see <a href="tests/testthat/test-version_diff.R">here</a>). The PR should have a description to help the reviewer understand what has been added/changed. New functionalities must be thoroughly documented, have examples and should be accompanied by at least one <a href="tests/testthat/">test</a> to ensure long term robustness. The PR will only be reviewed if all travis, AppVeyor and GitHub actions checks are successful. The person sending the PR should not be the one merging it.</p>
 </div>
 </div>
 </div>
@@ -200,7 +185,7 @@
 </div>
 
 <div class="pkgdown">
-  <p>Site built with <a href="https://pkgdown.r-lib.org/">pkgdown</a> 1.5.1.9000.</p>
+  <p>Site built with <a href="https://pkgdown.r-lib.org/">pkgdown</a> 1.5.1.</p>
 </div>
 
       </footer>
